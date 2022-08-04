@@ -1,4 +1,4 @@
-package com.lracha.libraryapi.model;
+package com.lracha.libraryapi.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,5 +25,7 @@ public class Livros implements Serializable {
     private String author;
     @Column (name = "release_date")
     private LocalDate releaseDate;
+    @Column
+    private long pages;
 
 }

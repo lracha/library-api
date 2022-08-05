@@ -17,6 +17,13 @@ public class LivrosController {
 
     @Autowired
     private LivrosService service;
+
+    @RequestMapping("/status")
+    public String status() {
+        String ok = "Ta rodando";
+        return ok;
+    }
+
     @PostMapping
     public ResponseEntity<Object> postLivro(@RequestBody @Valid LivrosDTO livrosDTO){
 

@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Data
 @Entity
@@ -15,10 +14,10 @@ import java.util.UUID;
 @AllArgsConstructor
 @Table(name = "tb_subsidio")
 public class Livros implements Serializable {
-    private static final long serialVersionUID = 1L;
+//    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
     @Column
     private String name;
     @Column

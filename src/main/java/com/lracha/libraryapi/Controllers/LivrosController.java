@@ -32,7 +32,7 @@ public class LivrosController {
         return service.save(livros);
     }
 
-    @GetMapping("/livro/{id}")
+    @GetMapping("/livros/{id}")
     public ResponseEntity<Object> getById(@PathVariable("id") Long id) {
         return service.findById(id);
     }

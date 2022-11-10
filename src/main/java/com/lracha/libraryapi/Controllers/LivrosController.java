@@ -5,6 +5,7 @@ import com.lracha.libraryapi.Model.Livros;
 import com.lracha.libraryapi.Services.LivrosService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class LivrosController {
 
     @GetMapping("/livros/{id}")
     public ResponseEntity<Object> getById(@PathVariable("id") Long id) {
-        return service.findById(id);
+        return ResponseEntity.status(HttpStatus.FOUND).body(service.findById(id));
     }
 
     @GetMapping("/livros")
